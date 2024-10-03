@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorpresa para ti</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #sorpresa {
+            display: none;
+            font-size: 24px;
+            color: #ff5733;
+            margin-top: 20px;
+            transition: opacity 0.5s;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Hola niña Vilma!</h1>
+    <button onclick="revelarSorpresa()">Revelar Sorpresa</button>
+    <div id="sorpresa">¡Sorpresa! ¡Le voy a robar el gato!</div>
+
+    <script>
+        function revelarSorpresa() {
+            const sorpresa = document.getElementById('sorpresa');
+            sorpresa.style.display = 'block';
+            sorpresa.style.opacity = 0;
+
+            setTimeout(() => {
+                sorpresa.style.opacity = 1;
+            }, 50);
+        }
+    </script>
+</body>
+</html>
